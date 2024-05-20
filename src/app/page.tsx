@@ -1,6 +1,14 @@
+"use client";
+
+import { useTestStore } from "@/store/useTestStore";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function HomePage() {
+  const value = useTestStore((state) => state.value);
+  const updateValue = useTestStore((state) => state.updateValue);
+  const [input, setInput] = useState("");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
@@ -30,6 +38,16 @@ export default function HomePage() {
               deploy it.
             </div>
           </Link>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <p>{value}</p>
+          <input
+            className="text-black"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button onClick={() => updateValue(input)}>Update</button>
         </div>
       </div>
     </main>
