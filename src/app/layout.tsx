@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "./theme-provider";
+import NavBar from "./nav-bar";
 
 export const metadata = {
   title: "Create T3 App",
@@ -15,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavBar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
