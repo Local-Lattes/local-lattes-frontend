@@ -25,12 +25,13 @@ export default function HomePage() {
           />
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Discover the Best Local Lattes
+              <h1 className="text-balance text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Discover the Best Local Cafes
               </h1>
               <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-                Explore a curated selection of the finest local coffee shops and
-                their signature latte creations. Find your new favorite spot.
+                Discover the best local coffee shops based on your favorite
+                categories and their signature creations. <br />
+                Find your new favorite spot.
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
