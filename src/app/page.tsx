@@ -1,17 +1,8 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useTestStore } from "@/store/useTestStore";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function HomePage() {
-  const value = useTestStore((state) => state.value);
-  const updateValue = useTestStore((state) => state.updateValue);
-  const [input, setInput] = useState("");
-
   return (
     <main className="flex flex-1 items-center py-12 md:py-24 lg:py-32 xl:py-48">
       <div className="container px-4 md:px-6">
